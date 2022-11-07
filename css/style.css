@@ -84,8 +84,7 @@ strong {
 }
 
 .menu-nav_hidden {
-    display: none;
-    height: 338px;
+   display: none;
     background-color: #f2f2f2;
 }
 
@@ -93,6 +92,11 @@ strong {
     position: absolute;
     top: 100%;
     right: 0;
+}
+
+.hidden-nav_p {
+    display: flex;
+    flex-direction: row;
 }
 
 .menu-li_foot {
@@ -137,13 +141,9 @@ strong {
     column-gap: 20px;
 }
 
-.hidden-nav {
-    width: 177px;
-    display: block;
-}
-
 .menu-hidden_head {
     margin: 0;
+    width: 108px;
     padding: 37px 0;
     font-size: 15px;
     line-height: 1.4em;
@@ -153,7 +153,11 @@ strong {
 
 .menu-hidden {
     margin: 0;
-    padding: 0 40px 0 0;
+    padding: 0 40px 100px 0;
+}
+
+.menu-hidden li {
+    padding-bottom: 15px;
 }
 
 .menu-hidden a {
@@ -176,8 +180,13 @@ strong {
     display: none;
 }
 
+.serch {
+    position: relative;
+}
+
 #serch {
-    margin: 8px 25px 8px;
+    margin: 8px 50px 8px;
+    padding-left: 20px;
     max-width: 264px;
     height: 38px;
     opacity: 0.702;
@@ -186,25 +195,29 @@ strong {
     color: #262626;
     background-color: #fff;
     border: 1px solid #999;
-}
-
-#serch::placeholder {
-    padding-left: 10px ;
+    outline: none;
 }
 
 .placeholder-serch::after {
     content: url(../img/search.png);
-    position: relative;
-    top: 4px;
-    right: 4em;
+    position: absolute;
+    top: 30%;
+    right: 37%;
+}
+
+.serch:hover>.placeholder-serch::after {
+    content: url(../img/search-blue.png);
 }
 
 .bask::before {
-    padding: 5px;
     content: url(../img/cart.png);
-    position: relative;
-    top: 4px;
-    right: 1em;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+}
+
+.serch:hover>.bask::before{
+    content: url(../img/cart-blue.png);
 }
 
 .exit{
@@ -212,6 +225,10 @@ strong {
     font-size: 15px;
     line-height: 2em;
     color: #262626;
+}
+
+.header-wrapper.serch:hover .exit {
+    color: #0067b8;
 }
 
 main {
