@@ -535,6 +535,10 @@ footer {
     font-weight: bold;
 }
 
+.bottom-menu li {
+    padding-bottom: 10px;
+}
+
 .bottom-menu a {
     margin: 0;
     font-size: 13px;
@@ -586,6 +590,12 @@ footer {
     display: none;
 }
 
+.lang {
+    font-size: 12px;
+    line-height: 1.6em;
+    color: #616161;
+}
+
 .lang::before {
     content: url(../img/lang.png);
 }
@@ -604,6 +614,7 @@ footer {
     color: #616161;
 }
 
-.foot a:hover {
+.foot a:hover,
+.last a:hover {
     text-decoration: underline;
 }
