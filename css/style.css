@@ -198,14 +198,12 @@ strong {
 
 .menu-li_dop::after {
     content: url(../img/arr-rightbutt.png);
-    position: absolute;
-    right: 54%;
+    padding-left: 10px;
 }
 
 .menu-nav_li:hover>.menu-li_dop::after {
     content: url(../img/arr-down.png);
-    position: absolute;
-    right: 54%;
+    padding-left: 10px;
 }
 
 .form-exit {
