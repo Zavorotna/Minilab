@@ -53,6 +53,10 @@ strong {
     flex-direction: row;
 }
 
+.header-menu_logo {
+    position: relative;
+}
+
 .header-menu_logo p {
     margin: 0 30px;
     padding: 15px 0;
@@ -66,8 +70,15 @@ strong {
     color: #666;
 }
     
-.header-menu_logo a::before{
-    content: url(../img/logo.png);
+.menu_logo a::before{
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    background: url(../img/sprite.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    background-position: -39px -4px;
 }
 
 .menu {
@@ -238,8 +249,8 @@ a.serch {
 
 a .bask {
     background-position: 0 0;
-    width: 22px;
-    height: 19px;
+    width: 18px;
+    height: 15px;
 }
 
 .serch-nav span:hover>.bask {
@@ -499,30 +510,59 @@ h2 {
     column-gap: 15px;
 }
 
-.exp::before {
-    padding: 9px 11px;
+.web-bott-exp {
     background-color: #425daa;
-    content: url(../img/ie.png);
+    width: 36px;
+    height: 36px;
+    position: relative;
 }
 
-.social .web-bott:hover>.exp::before,
-.social .web-bott:hover>.chrome::before,
-.social .web-bott:hover>.opera::before {
-    border-radius: 6px;
-    background-color: #140707;
-    transition-duration: 1s;
-}
-
-.chrome::before {
-    padding: 9px 11px;
+.web-bott-chrome {
     background-color: #55acee;
-    content: url(../img/chrome.png);
+    width: 36px;
+    height: 36px;
+    position: relative;
 }
 
-.opera::before {
-    padding: 9px 11px;
+.web-bott-opera {
     background-color: #ed2b2f;
-    content: url(../img/opera.png);
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+
+
+a.exp::before {
+    content: "";
+    background: url(../img/sprite.png) no-repeat;
+    top: 20%;
+    left: 20%;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background-position: -94px -2px;
+}
+
+a.chrome::before {
+    content: "";
+    background: url(../img/sprite.png) no-repeat;
+    top: 20%;
+    left: 20%;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background-position: -56px -2px;
+}
+
+a.opera::before {
+    content: "";
+    background: url(../img/sprite.png) no-repeat;
+    top: 20%;
+    left: 20%;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background-position: -75px -2px;
 }
 
 footer {
