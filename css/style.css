@@ -358,6 +358,8 @@ main {
 }
 
 .bott:hover>a {
+    background-color: #0067b8;
+    color: #fff;
     border-radius: 10px;
     transition-duration: 0.5s;
 }
@@ -483,12 +485,9 @@ h2 {
 }
 
 .bott-last:hover>a {
+    background-color: #0067b8;
     border-radius: 10px;
     transition-duration: 0.5s;
-}
-
-.social {
-    margin: 8px;
 }
 
 .section-social {
@@ -510,7 +509,16 @@ h2 {
     column-gap: 15px;
 }
 
+.web .web-bott-exp:hover,
+.web .web-bott-chrome:hover,
+.web .web-bott-opera:hover {
+    background-color: #0d0d0d;
+    border-radius: 25%;
+    transition: 1s ease 0s all;
+}
+
 .web-bott-exp {
+    margin: 0;
     background-color: #425daa;
     width: 36px;
     height: 36px;
@@ -518,6 +526,7 @@ h2 {
 }
 
 .web-bott-chrome {
+    margin: 0;
     background-color: #55acee;
     width: 36px;
     height: 36px;
@@ -525,12 +534,12 @@ h2 {
 }
 
 .web-bott-opera {
+    margin: 0;
     background-color: #ed2b2f;
     width: 36px;
     height: 36px;
     position: relative;
 }
-
 
 a.exp::before {
     content: "";
