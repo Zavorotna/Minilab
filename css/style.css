@@ -161,10 +161,11 @@ strong {
     width: 100%;
     display: flex;
     justify-content: center;
-    column-gap: 20px;
+    column-gap: 50px;
 }
 
-.menu-hidden_head {
+.menu-hidden_head,
+.menu-hidden_head-a {
     margin: 0;
     width: 108px;
     padding: 37px 0;
@@ -174,9 +175,15 @@ strong {
     font-weight: bold;
 }
 
+.menu-hidden_head-a {
+    padding-bottom: 17px;
+}
+
 .menu-hidden {
     margin: 0;
-    padding: 0 40px 100px 0;
+    padding: 0 0 100px 0;
+    max-width: 200px;
+    height: 90;
 }
 
 .menu-hidden li {
@@ -187,6 +194,10 @@ strong {
     font-size: 15px;
     line-height: 1.3em;
     color: #616161;
+}
+
+.menu-hidden_a {
+
 }
 
 .menu-li_dop::after {
