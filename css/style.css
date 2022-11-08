@@ -196,14 +196,16 @@ strong {
     color: #616161;
 }
 
-.menu-hidden_a {
-
+.menu-li_dop::after {
+    content: url(../img/arr-rightbutt.png);
+    position: absolute;
+    right: 54%;
 }
 
-.menu-li_dop::after {
+.menu-nav_li:hover>.menu-li_dop::after {
     content: url(../img/arr-down.png);
-    position: relative;
-    left: 15px;
+    position: absolute;
+    right: 54%;
 }
 
 .form-exit {
