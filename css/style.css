@@ -90,7 +90,7 @@ strong {
     padding: 0;
     display: flex;
     flex-direction: row;
-    column-gap: 25px;
+   
 }
 
 .menu-hidden li:hover>a {
@@ -102,11 +102,35 @@ strong {
 
 .menu-nav_li_a,
 .menu-li_dop {
-    padding: 14.5px;
+    padding: 14.5px 28px;
     display: block;
     font-size: 15px;
     line-height: 2em;
     color: #262626;
+}
+
+.menu-li_dop::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #262626;
+    border-right: 1px solid #262626;
+    transform: rotate(-45deg);
+    top: 45%;
+    right: 49%;
+}
+
+.menu-nav_li:hover>.menu-li_dop::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #262626;
+    border-right: 1px solid #262626;
+    transform: rotate(45deg);
+    top: 45%;
+    right: 49%;
 }
 
 .menu-nav_hidden {
@@ -199,16 +223,6 @@ strong {
     font-size: 15px;
     line-height: 1.3em;
     color: #616161;
-}
-
-.menu-li_dop::after {
-    content: url(../img/arr-rightbutt.png);
-    padding-left: 10px;
-}
-
-.menu-nav_li:hover>.menu-li_dop::after {
-    content: url(../img/arr-down.png);
-    padding-left: 10px;
 }
 
 .form-exit {
@@ -304,12 +318,27 @@ main {
 }
 
 .writes {
-    position: relative;
+    display: block;
 }
 
-.span-left {
+.arrow-span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
-    
+.span-left,
+.span-right {
+    position: relative;
+    top: 54.5px;
+}
+
+
+.span-left a,
+.span-right a {
+    display: block;
+    padding: 25px;
+    background-color: #0d0d0d;
 }
 
 .arrowleft::after {
@@ -317,12 +346,11 @@ main {
     position: absolute;
     width: 8px;
     height: 8px;
-    border-bottom: 1px solid #262626;
-    border-right: 1px solid #262626;
-    transform: rotate(-45deg);
-    right: 2%;
-    bottom: -25%;
-    
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(-45deg); 
+    top: 45%;
+    left: 40%;
 }
 
 .arrowright::before {
@@ -330,27 +358,20 @@ main {
     position: absolute;
     width: 8px;
     height: 8px;
-    border-bottom: 1px solid #262626;
-    border-right: 1px solid #262626;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
     transform: rotate(135deg);
-    right: 2%;
-    bottom: -40%;
+    top: 45%;
+    left: 45%;
 }
 
 .wrap:hover>.arrowleft {
     background-image: url(../img/secondbcg.jpg);
 }
 
-.arrowleft:hover {
-    opacity: 0.7;
-}
-
+.arrowleft:hover,
 .arrowright:hover {
     opacity: 0.7;
-}
-
-.writes {
-    display: block;
 }
 
 .hd {
