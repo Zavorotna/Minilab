@@ -91,20 +91,20 @@ strong {
     padding: 0;
     display: flex;
     flex-direction: row;
+    column-gap: 25px;
 }
 
-.aside-nav li:hover>a,
 .menu-hidden li:hover>a {
     color: #0067b8;
     text-decoration: underline;
     background-color: #f2f2f2;
 }
 
-.menu-nav_li {
-    padding: 14px 25px;
-}
 
-.menu-nav a {
+.menu-nav_li_a,
+.menu-li_dop {
+    padding: 14.5px;
+    display: block;
     font-size: 15px;
     line-height: 2em;
     color: #262626;
@@ -144,17 +144,23 @@ strong {
     line-height: 1.7em;
     text-transform: uppercase;
     color: #262626;
+    position: relative;
 }
 
 .menu-foot a::after {
-    content: url(../img/arr-hid.png);
-    position: relative;
-    left: 12px;
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #262626;
+    border-right: 1px solid #262626;
+    transform: rotate(-45deg);
+    top: 40%;
+    left: 55%;
 }
 
 .aside-nav .menu-nav_li:hover {
     background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
 }
 
 .menu-nav_li:hover>.menu-nav_hidden {
@@ -167,7 +173,7 @@ strong {
 .menu-hidden_head,
 .menu-hidden_head-a {
     margin: 0;
-    width: 108px;
+    max-width: 108px;
     padding: 37px 0;
     font-size: 15px;
     line-height: 1.4em;
@@ -212,6 +218,7 @@ strong {
 
 .serch-form {
     display: flex;
+    column-gap: 15px;
 }
 
 .serch-input {
@@ -230,25 +237,25 @@ strong {
 }
 
 a.serch {
-    background-position: -21px 0;
+    background-position: -20px -3px;
     width: 15px;
-    height: 20px;
+    height: 15px;
     position: absolute;
     right: 20px;
     bottom: 22px;
 }
 
 .serch-input span:hover>a {
-    background-position: -21px -17px ;
+    background-position: -20px -20px ;
     width: 15px;
-    height: 20px;
+    height: 15px;
     position: absolute;
     right: 20px;
     bottom: 22px;
 }
 
 .serch-nav {
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .serch-nav .bask {
@@ -265,9 +272,9 @@ a .bask {
 }
 
 .serch-nav span:hover>.bask {
-    background-position: 0 -17px;
-    width: 22px;
-    height: 19px;
+    background-position: -2px -21px;
+    width: 18px;
+    height: 15px;
 }
 
 .exit-form {
@@ -360,12 +367,19 @@ main {
     letter-spacing: 1px;
     line-height: 1.7em;
     text-transform: uppercase;
-}
-
-.bott a::after {
-    content: url(../img/arr-rightbutt.png);
     position: relative;
-    left: 19px;
+}
+/* arrow */
+.bott a::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #262626;
+    border-right: 1px solid #262626;
+    transform: rotate(-45deg);
+    top: 40%;
+    left: 85%;
 }
 
 .bott:hover>a {
@@ -472,6 +486,7 @@ h2 {
     text-transform: uppercase;
     background-color: #0d0d0d;
     text-align: center;
+    position: relative;
 }
 
 .propose {
@@ -490,9 +505,15 @@ h2 {
 }
 
 .bott-last a::after {
-    content: url(../img/arr-light.png);
-    position: relative;
-    left: 19px;
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(-45deg);
+    top: 40%;
+    left: 85%;
 }
 
 .bott-last:hover>a {
