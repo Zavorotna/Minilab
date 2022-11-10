@@ -311,8 +311,8 @@ main {
 }
 
 .wrap {
-    width: 1170px;
-    height: 540px;
+    max-width: 1170px;
+    max-height: 540px;
     margin: 40px 0;
     background-image: url(../img/bckgr-first.jpg);
 }
@@ -330,7 +330,6 @@ main {
 .span-left,
 .span-right {
     position: relative;
-    top: 54.5px;
 }
 
 
@@ -349,8 +348,8 @@ main {
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
     transform: rotate(-45deg); 
-    top: 45%;
     left: 40%;
+    bottom: 40%;
 }
 
 .arrowright::before {
@@ -361,8 +360,8 @@ main {
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
     transform: rotate(135deg);
-    top: 45%;
     left: 45%;
+    bottom: 40%;
 }
 
 .wrap:hover>.arrowleft {
@@ -384,7 +383,7 @@ main {
 }
  
 .txt {
-    width: 364px;
+    max-width: 364px;
     height: 40px;
     margin: 0;
     padding: 0 30px 0 70px ;
@@ -478,10 +477,36 @@ h2 {
     text-decoration: underline;
 }
 
-.fig::after {
-    content: url(../img/arr-right-blue.png);
+.fig-a,
+.fig-b,
+.fig-c,
+.fig-e {
     position: relative;
-    left: 11px;
+}
+
+.fig-a::after,
+.fig-c::after,
+.fig-e::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-bottom: 1px solid #227bc1;
+    border-right: 1px solid #227bc1;
+    transform: rotate(-45deg);
+    top: 10%;
+}
+
+.fig-b::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-bottom: 1px solid #227bc1;
+    border-right: 1px solid #227bc1;
+    transform: rotate(-45deg);
+    top: 37%;
+    right: 58%;
 }
 
 .store, 
