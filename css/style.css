@@ -109,28 +109,32 @@ strong {
     color: #262626;
 }
 
+.menu-li_dop {
+    position: relative;
+}
+
 .menu-li_dop::after {
     content: "";
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-bottom: 1px solid #262626;
     border-right: 1px solid #262626;
     transform: rotate(-45deg);
     top: 45%;
-    right: 49%;
+    right: 4%;
 }
 
 .menu-nav_li:hover>.menu-li_dop::after {
     content: "";
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-bottom: 1px solid #262626;
     border-right: 1px solid #262626;
     transform: rotate(45deg);
     top: 45%;
-    right: 49%;
+    right: 4%;
 }
 
 .menu-nav_hidden {
@@ -162,19 +166,22 @@ strong {
 .menu-foot {
     margin: 0;
     padding: 14px 0;
+    position: relative;
+}
+
+.menu-foot a {
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 1.7em;
     text-transform: uppercase;
     color: #262626;
-    position: relative;
 }
 
 .menu-foot a::after {
     content: "";
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-bottom: 1px solid #262626;
     border-right: 1px solid #262626;
     transform: rotate(-45deg);
@@ -271,7 +278,7 @@ a.serch {
     margin: 20px;
 }
 
-.serch-nav .bask {
+.serch-nav a {
     display: block;
     width: 18px;
     height: 15px;
@@ -279,7 +286,7 @@ a.serch {
 }
 
 a .bask {
-    background-position: -2px 0;
+    background-position: 0 0;
     width: 18px;
     height: 15px;
 }
@@ -671,7 +678,6 @@ a.opera::before {
 
 footer {
     margin: 0 auto;
-    height: 337px; 
     background-color: #f2f2f2;
 }
 
@@ -735,14 +741,10 @@ footer {
     flex-direction: row;
 }
 
-.langu {
-    font-size: 12px;
-    line-height: 1.6em;
-    color: #616161;
-}
-
-#list {
-    display: none;
+.language p {
+    margin: 0;
+    padding-bottom: 10px;
+    position: relative;
 }
 
 .lang {
@@ -752,7 +754,11 @@ footer {
 }
 
 .lang::before {
-    content: url(../img/lang.png);
+    content: "";
+    background: url(../img/sprite.png) no-repeat;
+    width: 14px;
+    height: 14px;
+    position: absolute;
 }
 
 .foot ul {
