@@ -739,7 +739,7 @@ footer {
 
 .language p {
     margin: 0;
-    padding-bottom: 10px;
+    padding: 0 0 10px 10px;
     position: relative;
 }
 
@@ -752,9 +752,12 @@ footer {
 .lang::before {
     content: "";
     background: url(../img/sprite.png) no-repeat;
+    background-position: -113px -1px;
     width: 14px;
     height: 14px;
     position: absolute;
+    top: 7%;
+    left: -10%;
 }
 
 .foot ul {
