@@ -77,7 +77,7 @@ strong {
     background: url(../img/sprite.png) no-repeat;
     width: 16px;
     height: 16px;
-    background-position: -39px -4px;
+    background-position: -38px -2px;
 }
 
 .menu {
@@ -124,6 +124,7 @@ strong {
     top: 45%;
     right: 4%;
 }
+
 
 .menu-nav_li:hover>.menu-li_dop::after {
     content: "";
@@ -252,12 +253,12 @@ strong {
 .serch-input a {
     display: block;
     width: 15px;
-    height: 20px;
+    height: 15px;
     background: url(../img/sprite.png) no-repeat;
 }
 
 a.serch {
-    background-position: -20px -2px;
+    background-position: -21px -2px;
     width: 15px;
     height: 15px;
     position: absolute;
@@ -266,7 +267,7 @@ a.serch {
 }
 
 .serch-input span:hover>a {
-    background-position: -20px -19px ;
+    background-position: -21px -19px ;
     width: 15px;
     height: 15px;
     position: absolute;
@@ -280,21 +281,16 @@ a.serch {
 
 .serch-nav a {
     display: block;
-    width: 18px;
-    height: 15px;
+    width: 19px;
+    height: 16px;
     background: url(../img/sprite.png) no-repeat;
 }
 
-a .bask {
-    background-position: 0 0;
-    width: 18px;
-    height: 15px;
-}
 
 .serch-nav span:hover>.bask {
-    background-position: -2px -19px;
-    width: 18px;
-    height: 15px;
+    background-position: 0 -17px;
+    width: 19px;
+    height: 16px;
 }
 
 .exit-form {
