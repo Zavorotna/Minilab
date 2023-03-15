@@ -31,7 +31,7 @@ strong {
 h1 {
     margin: 0;
     padding: 30rem 0 42rem;
-    font-size: 22rem;
+    font-size: 18rem;
     letter-spacing: 1rem;
     line-height: 1.1em;
     text-transform: uppercase;
@@ -71,12 +71,90 @@ h2 {
 }
 
 .wrapper {
-    margin: 0 auto;
+    margin: 0 15rem;
     max-width: 1171rem;
 }
 
 .header-navigation {
-    margin: 0 50rem;
+    margin: 0 15rem;
+}
+
+.burger {
+    cursor: pointer;
+    display: block;
+    padding-top: 20rem;
+    height: 30rem;
+    position: relative;
+    width: 30rem;
+}
+
+.burger span,
+.burger span:before,
+.burger span:after {
+    background: #0067b8;
+    content: "";
+    display: block;
+    height: 2rem;
+    position: absolute;
+    width: 100%;
+}
+
+.burger span:before {
+    top: 8rem;
+}
+
+.burger span:after {
+    bottom: -16rem;
+}
+
+.mobile {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f56;
+    transition: all 1s ease;
+}
+
+.mobile-flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 21rem;
+}
+
+.mobile li {
+    margin: 0;
+    padding: 16px;
+}
+
+.activemobile {
+    top: 55rem;
+}
+
+.active {
+    padding: 0;
+    padding-bottom: 8rem;
+}
+
+.active span{
+    background-color: transparent;
+}
+
+.active span::before {
+    top: 11rem;
+    transform: rotate(45deg);
+}
+
+.active span::after {
+    bottom: -11rem;
+    transform: rotate(-45deg);
+}
+
+.hidden-menu {
+    display: none;
 }
 
 .header-menu_logo {
@@ -113,7 +191,7 @@ h2 {
 
 .menu-nav_li_a,
 .menu-li_dop {
-    padding: 14.5rem 28rem;
+    padding: 16rem 28rem;
     display: block;
     font-size: 15rem;
     line-height: 2em;
@@ -195,6 +273,10 @@ h2 {
     transform: rotate(-45deg);
 }
 
+ul.aside-nav {
+    margin: 0;
+}
+
 .aside-nav .menu-nav_li:hover {
     background-color: #f2f2f2;
 }
@@ -202,6 +284,7 @@ h2 {
 .menu-nav_li:hover>.menu-nav_hidden {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     column-gap: 50rem;
 }
@@ -243,7 +326,7 @@ h2 {
 }
 
 .serch-form {
-    display: flex;
+    display: none;
     column-gap: 15rem;
 }
 
@@ -313,7 +396,6 @@ a.serch {
 .wrap {
     width: 100%;
     max-height: 540rem;
-    margin: 40rem 0;
     background-image: url(../img/bckgr-first.jpg);
 }
 
@@ -322,6 +404,7 @@ a.serch {
 }
 
 .arrow-span {
+    padding-top: 30rem;
     flex-direction: column;
     align-items: flex-end;
 }
@@ -371,27 +454,25 @@ a.serch {
     opacity: 0.7;
 }
 
+.writes {
+    padding: 15rem  0 0 15rem;
+}
+
 .hd {
     margin: 0;
-    padding: 189rem 0 22rem 70rem;
-    font-size: 46rem;
+    font-size: 30rem;
     line-height: 1.05em;
     color: #fff;
     font-weight: bold;
 }
  
 .txt {
-    max-width: 364rem;
-    height: 40rem;
     margin: 0;
-    padding: 0 30rem 0 70rem ;
+    padding: 22rem 0 30rem;
+    max-width: 364rem;
     font-size: 16rem;
     line-height: 1.5em;
     color: #fff;
-}
-
-.bott {
-    padding: 30rem 0 0 70rem;
 }
 
 .bott a {
@@ -426,12 +507,13 @@ a.serch {
 
 figure {
     margin: 0;
+    padding: 15rem;
     max-width: 270rem;
 }
 
 .service {
     margin-bottom: 67rem;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .service p {
@@ -490,15 +572,15 @@ figure {
 }
 
 .wrap-child {
-    padding: 163rem 0 146rem 70rem;
+    padding: 15rem 0 30rem 15rem;
     background: url(../img/background-last.jpg) no-repeat;
 }
 
 .wrap-head_child {
+    margin: 0;
     max-width: 450rem;
     height: 85rem;
-    margin: 0;
-    font-size: 46rem;
+    font-size: 32rem;
     line-height: 1.05em;
     color: #0d0d0d;
 }
@@ -511,12 +593,12 @@ figure {
 }
 
 .bott-last {
-    position: relative;
     margin: 0;
     padding-top: 30rem;
 }
 
 .bott-last a {
+    position: relative;
     padding: 16rem 50rem 15rem 26rem;
     color: #fff;
     font-size: 14rem;
@@ -681,9 +763,6 @@ footer {
 
 .foot ul {
     margin: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
 }
 
 .foot a {
@@ -696,4 +775,81 @@ footer {
 .foot a:hover,
 .last a:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 525px) {
+    h1 {
+        margin: 0;
+        padding: 30rem 0 42rem;
+        font-size: 22rem;
+        letter-spacing: 1rem;
+        line-height: 1.1em;
+        text-transform: uppercase;
+        color: #0d0d0d;
+        font-weight: bold;
+        text-align: center;
+    }
+    .wrap-child {
+        padding: 163rem 0 146rem 70rem;
+    }
+
+    .wrap-head_child {
+        font-size: 46rem;
+    }
+
+    .writes {
+        padding: 189rem 0 169rem 70rem;
+    }
+
+    .hd {
+        font-size: 46rem;
+    }
+
+    .arrow-span {
+        padding-top: 37rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .flex-header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .header-navigation {
+        margin: 0 50rem;
+    }
+    
+    .burger,
+    .mobile-menu {
+        display: none;
+    }
+
+    .hidden-menu {
+        display: flex;
+    }
+
+    .serch-form {
+        display: flex;
+    }
+    .wrap {
+        width: 100%;
+        max-height: 540rem;
+        margin: 40rem 0;
+        background-image: url(../img/bckgr-first.jpg);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    figure {
+        padding: 0;
+        max-width: 270rem;
+    }
+
+    .wrapper {
+        margin: 0 auto;
+    }
+    .service {
+        justify-content: space-between;
+    }
 }

@@ -9,13 +9,18 @@
 </head>
 <body>
     <header>
-        <div class="flex">
-            <div class="flex header-navigation">
-                <div class="header-menu_logo">
-                    <p><a href="index.html"><strong>Mini</strong>Lab</a></p>
+        <div class="flex-header">
+            <div class="flex-header header-navigation">
+                <div class="flex burger-flex">
+                    <div class="burger" id="burger">
+                        <span></span>
+                    </div>
+                    <div class="header-menu_logo">
+                        <p><a href="index.html"><strong>Mini</strong>Lab</a></p>
+                    </div>
                 </div>
                 <aside class="menu-aside">
-                    <nav class="menu-nav">
+                    <nav class="menu-nav hidden-menu">
                         <ul class="aside-nav flex">
                             <li class="menu-nav_li"><a class="menu-nav_li_a" href="#">About Us</a></li>
                             <li class="menu-nav_li"><a class="menu-nav_li_a" href="#">Surface</a></li>
@@ -77,8 +82,10 @@
                         </ul>
                     </nav>
                 </aside>
+                <div class="mobile-menu mobile" id="mobile">
+                </div>
             </div>
-            <div class="serch-form">
+            <div class="serch-form flex">
                 <div class="form-exit">
                     <a href="#"></a>
                     <p>Вхід</p>
@@ -282,7 +289,7 @@
                         <p><a class="lang" href="#">Вибір мови (Українська)</a></p>
                 </div>
                 <nav class="foot">
-                    <ul>
+                    <ul class="flex">
                         <li><a href="#">Контактні дані</a></li>
                         <li><a href="#">Положення про конфіденціальність</a></li>
                         <li><a href="#">Умови використання</a></li>
