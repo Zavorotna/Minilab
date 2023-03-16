@@ -10,6 +10,7 @@ body {
 }
 
 header {
+    position: relative;
     background-color: #fff;
     filter: drop-shadow(0.707rem 0.707rem 4rem rgba(0,0,0,0.12));
 }
@@ -41,8 +42,8 @@ b {
 }
 
 table {
+    width: 100%;
     border: none;
-    border-collapse: collapse;
 }
 
 figure {
@@ -103,6 +104,31 @@ figure {
     background-color: #f2f2f2;
 }
 
+.arrow-hidden::after {
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-bottom: 1rem solid #262626;
+    border-right: 1rem solid #262626;
+    transform: rotate(-45deg);
+    top: 49%;
+    left: 56%;
+    transition: all .5s ease;
+}
+
+.hidden:hover>.arrow-hidden::after {
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-bottom: 1rem solid #262626;
+    border-right: 1rem solid #262626;
+    transform: rotate(45deg);
+    top: 45%;
+    right: 4%;
+}
+
 .main-table thead > tr > th {
     font-size: 15rem;
     line-height: 1.4em;
@@ -110,13 +136,61 @@ figure {
     font-weight: bold;
 }
 
-.hidden {
+.hidden-block {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.main-table {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.main-table th {
+    padding: 37rem 20rem 48rem 0;
+}
+
+tbody tr > td {
+    vertical-align: top;
+    text-align: left;
+}
+
+.main-table a {
+    padding: 0;
+    padding-right: 22rem;
+    padding-bottom: 10rem;
+}
+
+.more {
+    margin: 0;
+    background-color: #e6e6e6;
+    text-align: center;
     position: relative;
 }
 
-.hidden-block {
+.more a {
+    padding: 10rem ;
+    font-size: 14rem;
+    letter-spacing: 1px;
+    line-height: 1,7em;
+    text-transform: uppercase;
+    color: #262626;
+}
+
+.more a::after {
+    content: "";
     position: absolute;
-    display: none;
+    top: 41%;
+    left: 56%;
+    width: 7rem;
+    height: 7rem;
+    border-bottom: 1rem solid #262626;
+    border-right: 1rem solid #262626;
+    transform: rotate(-45deg);
 }
 
 .form-box form {
