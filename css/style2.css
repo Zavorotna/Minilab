@@ -1,0 +1,551 @@
+html {
+    font-size: 1px;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #fff;
+    filter: drop-shadow(0.707rem 0.707rem 4rem rgba(0,0,0,0.12));
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 46px;
+    line-height: 48px;
+    color: #fff;
+}
+
+b {
+    font-size: 20rem;
+    line-height: 1.5em;
+    color: #0067b8;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
+figure {
+    margin: 0;
+    max-width: 270rem;
+}
+
+.wrap {
+    margin: 0 100rem;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1140rem;
+}
+
+.flex-between,
+.flex-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo p {
+    padding: 15rem 0;
+    position: relative;
+}
+
+.logo a {
+    font-size: 20rem;
+    line-height: 1.5em;
+    padding: 0 10rem;
+    color: #666;
+}
+
+.logo p::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -15%;
+    background: url(../img/sprite.png) no-repeat;
+    width: 16rem;
+    height: 16rem;
+    background-position: -38rem -2rem;
+}
+
+.main-menu a {
+    display: inline-block;
+    padding: 15rem 25rem;
+    font-size: 15rem;
+    line-height: 2em;
+    color: #262626;
+}
+
+.main-menu li:hover > a {
+    color: #0067b8;
+    text-decoration: underline;
+    background-color: #f2f2f2;
+}
+
+.main-table thead > tr > th {
+    font-size: 15rem;
+    line-height: 1.4em;
+    color: #262626;
+    font-weight: bold;
+}
+
+.hidden {
+    position: relative;
+}
+
+.hidden-block {
+    position: absolute;
+    display: none;
+}
+
+.form-box form {
+    max-width: 265rem;
+}
+
+.input {
+    margin: 11rem 0;
+    padding: 10rem 14rem;
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid #999999;
+}
+
+.box {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+}
+
+.first-serch {
+    column-gap: 25rem;
+}
+
+.box-serch a {
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    background: url(../img/sprite.png) no-repeat;
+}
+
+.serch a {
+    position: absolute;
+    background-position: -21rem -2rem;
+    width: 15rem;
+    height: 15rem;
+    top: 22rem;
+    right: 35rem;
+}
+
+.serch:hover > a {
+    background-position: -21rem -19rem ;
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    top: 22rem;
+    right: 35rem;
+}
+
+.box-bask a {
+    display: block;
+    width: 19rem;
+    height: 16rem;
+    background: url(../img/sprite.png) no-repeat;
+}
+
+.bask a {
+    position: absolute;
+    top: 20rem;
+    right: 15rem;
+}
+
+.bask:hover > a {
+    background-position: 0 -17rem;
+    width: 19rem;
+    height: 16rem;
+}
+
+.enter {
+    margin: 15rem 0;
+}
+
+.enter a {
+    font-size: 15rem;
+    line-height: 2em;
+    color: #262626;
+}
+
+.enter:hover > a {
+    color: #0067b8;
+}
+
+.main-section {
+    margin: 30rem 0;
+    width: 100%;
+    background: url(../img/bckgr-first.jpg) no-repeat;
+}
+
+.main-info {
+    padding: 189rem 0 0 70rem;
+}
+
+.info {
+    padding: 22rem 0 30rem;
+    max-width: 364rem;
+    font-size: 16rem;
+    line-height: 24rem;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    background-color: #fff;
+    padding: 16rem 50rem 15rem 26rem;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.button a {
+    position: relative;
+    font-size: 14rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #262626;
+    transition: all 1s ease;
+}
+
+.button a::after {
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border-bottom: 1rem solid #262626;
+    border-right: 1rem solid #262626;
+    transform: rotate(-45deg);
+    top: 28%;
+    right: -20%;
+}
+
+.button:hover > a::after {
+    border-bottom: 1rem solid #fff;
+    border-right: 1rem solid #fff;
+}
+
+.button:hover {
+    background-color: #0067b8;
+}
+
+.button:hover > a {
+    color: #fff;
+}
+
+.arrow-span {
+    padding-top: 30rem;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.span-left,
+.span-right {
+    position: relative;
+}
+
+.span-left a,
+.span-right a {
+    display: inline-block;
+    padding: 25rem;
+    background-color: #0d0d0d;
+}
+
+.arrowleft::after {
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border-bottom: 1rem solid #fff;
+    border-right: 1rem solid #fff;
+    transform: rotate(-45deg); 
+    left: 40%;
+    bottom: 40%;
+}
+
+.arrowright::before {
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    border-bottom: 1rem solid #fff;
+    border-right: 1rem solid #fff;
+    transform: rotate(135deg);
+    left: 45%;
+    bottom: 40%;
+}
+
+.proposition h2 {
+    margin: 0;
+    padding: 30rem 0 40rem;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    text-align: center;
+}
+
+.service {
+    margin-bottom: 67rem;
+}
+
+.service h3 {
+    font-size: 20rem;
+    color: #0d0d0d;
+}
+
+.service p {
+    max-width: 256rem;
+    height: 70rem;
+    margin: 0;
+    padding: 0 40rem 18rem 0;
+    font-size: 15rem;
+    line-height: 21rem;
+    color: #262626;
+}
+
+.service a {
+    font-size: 13rem;
+    letter-spacing: 1rem;
+    line-height: 1.5em;
+    color: #0067b8;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.service p:hover>a{
+    text-decoration: underline;
+}
+
+.arrow {
+    position: relative;
+}
+
+.arrow a::after {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-bottom: 1rem solid #227bc1;
+    border-right: 1rem solid #227bc1;
+    transform: rotate(-45deg);
+    top: 10%;
+    right: 25%;
+}
+
+.bottom-info {
+    width: 100%;
+    background: url(../img/background-last.jpg) no-repeat; 
+}
+
+.second-info {
+    padding: 165rem 0 146rem 70rem;
+    max-width: 450rem;
+}
+
+.second-info h2 {
+    margin: 0;
+    font-size: 46rem;
+    color: #0d0d0d;
+}
+
+.last-info {
+    padding: 30rem 0;
+    font-size: 16rem;
+    line-height: 1,5em;
+    color: #0d0d0d;
+}
+
+.button-second {
+    background-color: #0d0d0d;
+}
+
+.button-second a {
+    color: #fff;
+}
+
+.button-second a::after {
+    border-bottom: 1rem solid #fff;
+    border-right: 1rem solid #fff;
+}
+
+.section-social h2 {
+    opacity: 0.702;
+    font-size: 15rem;
+    line-height: 2em;
+    color: #262626;
+    text-align: center;
+}
+
+.web {
+    padding-bottom: 54rem;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15rem;
+}
+
+.web .web-bott-exp:hover,
+.web .web-bott-chrome:hover,
+.web .web-bott-opera:hover {
+    background-color: #0d0d0d;
+    border-radius: 25%;
+    transition: 1s ease 0s all;
+}
+
+.web-bott-exp,
+.web-bott-chrome,
+.web-bott-opera {
+    margin: 0;
+    width: 36rem;
+    height: 36rem;
+    position: relative;
+}
+
+.web-bott-exp {
+    background-color: #425daa;
+}
+
+.web-bott-chrome {
+    background-color: #55acee;
+}
+
+.web-bott-opera {
+    background-color: #ed2b2f;
+}
+
+a.exp::before,
+a.chrome::before,
+a.opera::before {
+    content: "";
+    background: url(../img/sprite.png) no-repeat;
+    top: 25%;
+    left: 25%;
+    width: 19rem;
+    height: 19rem;
+    position: absolute;
+}
+
+a.exp::before {
+    background-position: -94rem -2rem;
+}
+
+a.chrome::before {
+    background-position: -56rem -2rem;
+}
+
+a.opera::before {
+    background-position: -75rem -2rem;
+}
+
+footer {
+    margin: 0 auto;
+    background-color: #f2f2f2;
+}
+
+.bottom-menu {
+    padding: 58rem 0 0;
+    column-gap: 30rem;
+}
+
+.bottom-menu p {
+    margin: 0;
+    margin-bottom: 24rem;
+    font-size: 15rem;
+    line-height: 1.6em;
+    color: #616161;
+    font-weight: bold;
+}
+
+.bottom-menu li {
+    padding-bottom: 10rem;
+}
+
+.bottom-menu a {
+    font-size: 13rem;
+    line-height: 1.5em;
+    color: #616161;
+}
+
+.bottom-menu li:hover > a {
+    text-decoration: underline;
+}
+
+.bottom-menu nav > ul {
+    padding: 0;
+}
+
+.last {
+    padding-top: 74rem;
+    padding-bottom: 25rem;
+}
+
+.language p {
+    margin: 0;
+    padding-left: 25rem;
+    position: relative;
+}
+
+.lang {
+    font-size: 12rem;
+    line-height: 1.6em;
+    color: #616161;
+}
+
+.lang::before {
+    content: "";
+    background: url(../img/sprite.png) no-repeat;
+    background-position: -113rem -1rem;
+    width: 14rem;
+    height: 14rem;
+    position: absolute;
+    top: 7%;
+    left: 2rem;
+}
+
+.bottom {
+    padding: 61rem 0 26rem;
+}
+
+.foot {
+    margin: 0;
+}
+
+.foot a {
+    padding-left: 27rem;
+    font-size: 12rem;
+    line-height: 1.6em;
+    color: #616161;
+}
+
+.foot a:hover,
+.last a:hover {
+    text-decoration: underline;
+}
