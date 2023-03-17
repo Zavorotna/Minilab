@@ -30,7 +30,7 @@ p {
 
 h1 {
     margin: 0;
-    font-size: 46px;
+    font-size: 34px;
     line-height: 48px;
     color: #fff;
 }
@@ -48,15 +48,17 @@ table {
 
 figure {
     margin: 0;
+    padding: 20rem;
     max-width: 270rem;
 }
 
 .wrap {
-    margin: 0 100rem;
+    margin: 0 30rem;
 }
 
 .wrapper {
     margin: 0 auto;
+    padding: 0 15rem;
     max-width: 1140rem;
 }
 
@@ -67,8 +69,59 @@ figure {
     flex-wrap: wrap;
 }
 
+.burger {
+    cursor: pointer;
+    display: block;
+    padding-top: 20rem;
+    height: 30rem;
+    position: relative;
+    width: 30rem;
+}
+
+.burger span,
+.burger span:before,
+.burger span:after {
+    background: #0067b8;
+    content: "";
+    display: block;
+    height: 2rem;
+    position: absolute;
+    width: 100%;
+}
+
+.burger span:before {
+    top: 8rem;
+}
+
+.burger span:after {
+    bottom: -16rem;
+}
+
+.mobile {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f56;
+    transition: all 1s ease;
+}
+
+.mobile-flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 21rem;
+}
+
+.mobile li {
+    margin: 0;
+    padding: 16px;
+}
+
 .logo p {
-    padding: 15rem 0;
+    padding: 15rem 0 0 15rem;
     position: relative;
 }
 
@@ -82,17 +135,25 @@ figure {
 .logo p::before {
     content: "";
     position: absolute;
-    top: 35%;
-    left: -15%;
+    top: 48%;
+    left: 0;
     background: url(../img/sprite.png) no-repeat;
     width: 16rem;
     height: 16rem;
     background-position: -38rem -2rem;
 }
 
+.menu {
+    display: none;
+}
+
+.main-menu ul {
+    padding: 0;
+}
+
 .main-menu a {
     display: inline-block;
-    padding: 15rem 25rem;
+    padding: 15rem 15rem;
     font-size: 15rem;
     line-height: 2em;
     color: #262626;
@@ -104,29 +165,33 @@ figure {
     background-color: #f2f2f2;
 }
 
+.arrow-hidden {
+    position: relative;
+}
+
 .arrow-hidden::after {
     content: "";
     position: absolute;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     border-bottom: 1rem solid #262626;
     border-right: 1rem solid #262626;
     transform: rotate(-45deg);
-    top: 49%;
-    left: 56%;
+    top: 48%;
+    right: 7%;
     transition: all .5s ease;
 }
 
 .hidden:hover>.arrow-hidden::after {
     content: "";
     position: absolute;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     border-bottom: 1rem solid #262626;
     border-right: 1rem solid #262626;
     transform: rotate(45deg);
-    top: 45%;
-    right: 4%;
+    top: 46%;
+    right: 6%;
 }
 
 .main-table thead > tr > th {
@@ -137,6 +202,11 @@ figure {
 }
 
 .hidden-block {
+    display: none;
+}
+
+.hidden:hover > .hidden-block {
+    display: block;
     position: absolute;
     width: 100%;
     top: 100%;
@@ -165,11 +235,15 @@ tbody tr > td {
     padding-bottom: 10rem;
 }
 
+.more-arrow {
+    position: relative;
+    background-color: #e6e6e6;
+    z-index: 4;
+}
+
 .more {
     margin: 0;
-    background-color: #e6e6e6;
     text-align: center;
-    position: relative;
 }
 
 .more a {
@@ -185,7 +259,7 @@ tbody tr > td {
     content: "";
     position: absolute;
     top: 41%;
-    left: 56%;
+    left: 60%;
     width: 7rem;
     height: 7rem;
     border-bottom: 1rem solid #262626;
@@ -198,6 +272,7 @@ tbody tr > td {
 }
 
 .input {
+    display: none;
     margin: 11rem 0;
     padding: 10rem 14rem;
     width: 100%;
@@ -210,10 +285,6 @@ tbody tr > td {
     position: relative;
     width: 25rem;
     height: 25rem;
-}
-
-.first-serch {
-    column-gap: 25rem;
 }
 
 .box-serch a {
@@ -229,7 +300,7 @@ tbody tr > td {
     width: 15rem;
     height: 15rem;
     top: 22rem;
-    right: 35rem;
+    right: 25rem;
 }
 
 .serch:hover > a {
@@ -238,7 +309,7 @@ tbody tr > td {
     height: 15rem;
     position: absolute;
     top: 22rem;
-    right: 35rem;
+    right: 25rem;
 }
 
 .box-bask a {
@@ -281,7 +352,7 @@ tbody tr > td {
 }
 
 .main-info {
-    padding: 189rem 0 0 70rem;
+    padding: 70rem 40rem;
 }
 
 .info {
@@ -335,6 +406,7 @@ tbody tr > td {
 }
 
 .arrow-span {
+    display: none;
     padding-top: 30rem;
     flex-direction: column;
     align-items: flex-end;
@@ -379,15 +451,16 @@ tbody tr > td {
 .proposition h2 {
     margin: 0;
     padding: 30rem 0 40rem;
-    font-size: 22px;
+    font-size: 22rem;
     letter-spacing: 1px;
-    line-height: 24px;
+    line-height: 24rem;
     text-transform: uppercase;
     color: #0d0d0d;
     text-align: center;
 }
 
 .service {
+    justify-content: center;
     margin-bottom: 67rem;
 }
 
@@ -441,13 +514,13 @@ tbody tr > td {
 }
 
 .second-info {
-    padding: 165rem 0 146rem 70rem;
+    padding: 70rem 40rem;
     max-width: 450rem;
 }
 
 .second-info h2 {
     margin: 0;
-    font-size: 46rem;
+    font-size: 36rem;
     color: #0d0d0d;
 }
 
@@ -545,8 +618,14 @@ footer {
 }
 
 .bottom-menu {
+    justify-content: center;
     padding: 58rem 0 0;
     column-gap: 30rem;
+}
+
+.bottom-menu nav {
+    min-width: 250rem;
+    padding-bottom: 25rem;
 }
 
 .bottom-menu p {
@@ -622,4 +701,108 @@ footer {
 .foot a:hover,
 .last a:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width:425px) {
+    h1 {
+        font-size: 46px;
+    }
+
+    .first-serch {
+     column-gap: 25rem;
+    }
+
+    .serch a {
+        right: 35rem;
+    }
+    
+    .serch:hover > a {
+        right: 35rem;
+    }
+    
+    .main-info {
+        padding: 189rem 0 70rem 70rem;
+    }
+
+    .second-info {
+        padding: 165rem 0 146rem 70rem;
+    }
+
+    .second-info h2 {
+        font-size: 46rem;
+    }
+}
+
+
+@media screen and (min-width: 798px){
+   .input {
+    display: block;
+   } 
+
+   .arrow-span {
+    display: flex;
+   }
+
+   .main-info {
+    padding: 189rem 0 0rem 70rem;
+}
+}
+
+@media screen and (min-width: 1024px) {
+    .burger {
+        display: none;
+    }
+    
+    .menu {
+        display: block;
+    }
+
+    .bottom-menu {
+        padding: 58rem 20rem;
+        justify-content: space-between;
+        column-gap: 10rem;
+    }
+
+    .bottom-menu nav {
+        min-width: 130rem;
+    }
+
+}
+
+@media screen and (min-width:1440px) {
+    figure {
+        margin: 0;
+        padding: 0;
+        max-width: 270rem;
+    }
+    
+    .wrap {
+        margin: 0 100rem;
+    }
+    
+    .head-navigation li > a {
+        padding: 15rem 25rem;
+    }
+    
+    .arrow-hidden::after {
+        width: 6rem;
+        height: 6rem;
+        top: 46%;
+        right: 10%;
+    }
+    
+    .hidden:hover>.arrow-hidden::after {
+        width: 6rem;
+        height: 6rem;
+        top: 45%;
+        right: 10%;
+    }
+
+    .more a::after {
+        left: 56%;
+    }
+
+    .service {
+        justify-content: space-between;
+    }
 }
