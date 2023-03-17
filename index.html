@@ -70,6 +70,94 @@
                     </nav>
                 </div>
                 <div class="mobile-menu mobile" id="mobile">
+                    <nav class="burger-menu">
+                        <ul class="head-navigation-burger">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Surface</a></li>
+                            <li><a href="#">Xbox</a></li>
+                            <li><a href="#">Підтримка</a></li>
+                            <li><a class="hidden-menu-sidebar" href="#">Додатково</a>
+                                <ul class="sidebar position-sidebar">
+                                    <li>
+                                        <a href="#">Прогрaмне забезпеченн</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Програми для ОС</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Skype</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Notepad++</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Комп’ютери та пристрої</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Планшети</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Аксесуари та інше</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Розваг</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Ігри</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Ігри для ПК</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Бізне</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Реклама</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Корпоративні рішення</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">DevTools & I</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Sublime Text 3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Розробка програм для Android</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Документи</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Іншe</a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">Наш магазин</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Безкоштовні завантаження</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Освіта</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="back"><a href="index.html">Back</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <div class="first-serch flex-between">
@@ -283,4 +371,12 @@
         </footer>
     </div>
 </body>
+<script>
+    const burger = document.querySelector('.burger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    burger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('activemobile');
+    });
+  </script>
 </html>

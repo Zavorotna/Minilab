@@ -21,6 +21,7 @@ a {
 
 ul {
     margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -70,23 +71,22 @@ figure {
 }
 
 .burger {
-    cursor: pointer;
+    position: relative;
     display: block;
     padding-top: 20rem;
     height: 30rem;
-    position: relative;
     width: 30rem;
+    cursor: pointer;
 }
 
 .burger span,
 .burger span:before,
 .burger span:after {
-    background: #0067b8;
     content: "";
-    display: block;
-    height: 2rem;
     position: absolute;
+    height: 2rem;
     width: 100%;
+    background: #0067b8;
 }
 
 .burger span:before {
@@ -97,27 +97,136 @@ figure {
     bottom: -16rem;
 }
 
+.active {
+    position: relative;
+    padding: 0;
+    padding-bottom: 20rem;
+}
+
+.active span{
+    background-color: transparent;
+}
+
+.active span::before {
+    top: 28rem;
+    transform: rotate(45deg);
+}
+
+.active span::after {
+    bottom: -28em;
+    transform: rotate(-45deg);
+}
+
 .mobile {
-    position: fixed;
-    top: -100%;
+    display: none;
+}
+
+.activemobile {
+    display: block;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #1f1f56;
-    transition: all 1s ease;
 }
 
-.mobile-flex {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 21rem;
+.burger-menu a {
+    font-size: 15rem;
+    line-height: 1.4em;
+    color: #262626;
+    font-weight: bold;
 }
 
-.mobile li {
-    margin: 0;
-    padding: 16px;
+.head-navigation-burger {
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.head-navigation-burger > li {
+    padding: 20rem;
+}
+
+.head-navigation-burger > li + li {
+    border-top: 1px solid #262626;
+}
+
+.head-navigation-burger li:hover > .sidebar {
+    display: block;
+}
+
+.sidebar {
+    display: none;
+}
+
+.position-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12rem 15rem;
+    font-size: 14rem;
+    background-color: #e4e4ec;
+}
+
+.sidebar > li > a {
+    position: relative;
+    color: #25252c;
+}
+
+.sidebar > li > a:before {
+    content: '';
+    position: absolute;
+    top: 16rem;
+    right: 15rem;
+    width: 7rem;
+    height: 7rem;
+    border-bottom: 2rem solid #666;
+    border-right: 2rem solid #666;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+
+.sidebar > li:hover a:before {
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.sidebar > li + li > a {
+    border-top: 1rem solid #cdcddd;
+}
+
+.sidebar > li:hover > a {
+    color: #fff;
+    background-color: #55acee;
+}
+
+.sidebar li:hover .sub-menu {
+    max-height: 1000rem;
+    visibility: visible;
+    transition: max-height 1s ease;
+}
+
+.sub-menu {
+    max-height: 0;
+    visibility: hidden;
+}
+
+.sub-menu a {
+    padding-left: 30rem;
+    color: #666;
+}
+
+.sub-menu a:hover {
+    background-color: #cecedd;
 }
 
 .logo p {
@@ -165,11 +274,13 @@ figure {
     background-color: #f2f2f2;
 }
 
-.arrow-hidden {
+.arrow-hidden,
+.hidden-menu-sidebar {
     position: relative;
 }
 
-.arrow-hidden::after {
+.arrow-hidden::after,
+.hidden-menu-sidebar::after {
     content: "";
     position: absolute;
     width: 5rem;
@@ -192,6 +303,14 @@ figure {
     transform: rotate(45deg);
     top: 46%;
     right: 6%;
+}
+
+.hidden-menu-sidebar::after {
+    width: 7rem;
+    height: 7rem;
+    right: -50%;
+    border-bottom: 2rem solid #262626;
+    border-right: 2rem solid #262626;
 }
 
 .main-table thead > tr > th {
