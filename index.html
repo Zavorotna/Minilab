@@ -180,6 +180,13 @@
         </div>
     </header>
     <div class="wrapper">
+        <div class="formbox wrapper">
+            <form action="#">
+                <label class="label" for="text"></label>
+                <input class="input-mobile" type="text" placeholder="Пошук на сайті">
+                <a href="#"></a>
+            </form>
+        </div>
         <main>
             <section class="main-section">
                 <div class="main-info">
@@ -375,10 +382,16 @@
     const burger = document.querySelector('.burger');
     const mobileMenu = document.querySelector('.mobile-menu');
     const button = document.querySelector('.button');
+    const serch = document.querySelector('.serch');
+    const formbox = document.querySelector('.formbox');
     burger.addEventListener('click', function() {
       this.classList.toggle('active');
       mobileMenu.classList.toggle('activemobile');
       button.classList.toggle('activebutton');
+    });
+    serch.addEventListener('click', function () {
+        this.classList.toggle('activeserch');
+        formbox.classList.toggle('activeform');
     });
   </script>
 </html>

@@ -397,6 +397,43 @@ tbody tr > td {
     max-width: 265rem;
 }
 
+.formbox {
+    display: none;
+}
+
+.activeform {
+    display: block;
+    border:1px solid #999999;
+}
+
+.activeform form {
+    position: relative;
+    width: 100%;
+}
+
+.input-mobile {
+    padding: 10rem;
+    color: #0d0d0d;
+    outline: none;
+    border: none;
+}
+
+.activeform form a {
+    display: inline-block;
+}
+
+.activeform form a::before {
+    content: "";
+    position: absolute;
+    top: 36%;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    border-bottom: 1rem solid #262626;
+    border-right: 1rem solid #262626;
+    transform: rotate(-45deg);
+}
+
 .input {
     display: none;
     margin: 11rem 0;
@@ -549,7 +586,7 @@ tbody tr > td {
 
 .span-left a,
 .span-right a {
-    display: inline-block;
+    display: block;
     padding: 25rem;
     background-color: #0d0d0d;
 }
@@ -874,19 +911,29 @@ a.opera::before {
 
 @media screen and (min-width: 798px){
    .input {
-    display: block;
+        display: block;
    } 
 
    .arrow-span {
-    display: flex;
+        display: flex;
    }
 
    .main-info {
-    padding: 189rem 0 0rem 70rem;
-}
+        padding: 189rem 0 0rem 70rem;
+    }
+
+    .activeform {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    figure {
+        margin: 0;
+        padding: 5rem;
+        max-width: 270rem;
+    }
+
     .burger {
         display: none;
     }
@@ -915,13 +962,7 @@ a.opera::before {
 }
 
 @media screen and (min-width:1440px) {
-    figure {
-        margin: 0;
-        padding: 0;
-        max-width: 270rem;
-    }
-    
-    .wrap {
+      .wrap {
         margin: 0 100rem;
     }
     
@@ -949,5 +990,70 @@ a.opera::before {
 
     .service {
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 2200px) {
+    html {
+        font-size: 2px;
+    }
+
+    img {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 52rem;
+    }
+    
+    .wrapper {
+        margin: 0 auto;
+        padding: 0 15rem;
+        max-width: none;
+    }
+
+    .logo p::before {
+        background-size: 800%;
+    }
+
+    .form-box form {
+        min-width: 250rem;
+    }
+
+    .input {
+        font-size: 15rem;
+    }
+
+    .bask a {
+        background-size: 600%;
+    }
+
+    .serch a {
+        background-size: 850%;
+    }
+
+    .main-section,
+    .bottom-info {
+        background-size: cover;
+    }
+
+    a.exp::before {
+        background-size: 700%;
+    }
+
+    a.chrome::before {
+        background-size: 700%;
+    }
+    
+    a.opera::before {
+        background-size: 700%;
+    }
+    
+    .footer {
+        padding: 50rem;
+    }
+    a.lang::before {
+        top: 2rem;
+        background-size: 935%;
     }
 }
