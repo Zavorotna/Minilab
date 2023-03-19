@@ -1027,9 +1027,17 @@ a.opera::before {
     .bask a {
         background-size: 600%;
     }
+    
+    .bask:hover >  a {
+        background-position: 0 -14.5rem;
+    }
 
     .serch a {
         background-size: 850%;
+    }
+
+    .serch:hover > a{
+        background-position: -21rem -18.5rem;
     }
 
     .main-section,
