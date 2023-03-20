@@ -944,6 +944,7 @@ a.opera::before {
     .bottom-menu {
         padding: 58rem 20rem;
         justify-content: space-between;
+        flex-wrap: nowrap;
         column-gap: 10rem;
     }
 
