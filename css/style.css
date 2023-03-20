@@ -674,14 +674,13 @@ tbody tr > td {
 
 .arrow a::after {
     content: "";
-    position: absolute;
+    display: inline-block;
     width: 5rem;
     height: 5rem;
     border-bottom: 1rem solid #227bc1;
     border-right: 1rem solid #227bc1;
     transform: rotate(-45deg);
-    top: 9%;
-    right: 26%;
+    margin-left: 10rem;
 }
 
 .double a:after {
