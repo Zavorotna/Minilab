@@ -595,6 +595,11 @@ tbody tr > td {
     background-color: #0d0d0d;
 }
 
+.span-right a:hover,
+.span-left a:hover {
+    opacity: 0.7;
+}
+
 .arrowleft::after {
     content: "";
     position: absolute;
