@@ -49,7 +49,7 @@ table {
 
 figure {
     margin: 0;
-    padding: 0 20rem;
+    padding: 0 20rem 40rem 20rem;
     max-width: 270rem;
 }
 
@@ -649,7 +649,6 @@ tbody tr > td {
     max-width: 256rem;
     height: 70rem;
     margin: 0;
-    padding: 0 40rem 25rem 0;
     font-size: 15rem;
     line-height: 21rem;
     color: #262626;
@@ -668,10 +667,6 @@ tbody tr > td {
     text-decoration: underline;
 }
 
-.arrow {
-    position: relative;
-}
-
 .arrow a::after {
     content: "";
     display: inline-block;
@@ -682,11 +677,6 @@ tbody tr > td {
     transform: rotate(-45deg);
     margin-left: 10rem;
     margin-bottom: 2rem;
-}
-
-.double a:after {
-    top: 31%;
-    right: 47%;
 }
 
 .bottom-info {
