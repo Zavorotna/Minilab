@@ -681,6 +681,7 @@ tbody tr > td {
     border-right: 1rem solid #227bc1;
     transform: rotate(-45deg);
     margin-left: 10rem;
+    margin-bottom: 2rem;
 }
 
 .double a:after {
