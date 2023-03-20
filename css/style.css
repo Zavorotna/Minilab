@@ -444,6 +444,10 @@ tbody tr > td {
     border: 1px solid #999999;
 }
 
+.formboxEnd {
+    display: none;
+}
+
 .box {
     position: relative;
     width: 25rem;
