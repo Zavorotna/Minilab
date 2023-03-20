@@ -895,11 +895,11 @@ a.opera::before {
     }
     
     .main-info {
-        padding: 189rem 0 70rem 70rem;
+        padding: 189rem 20rem 70rem 70rem;
     }
 
     .second-info {
-        padding: 165rem 0 146rem 70rem;
+        padding: 165rem 20rem 146rem 70rem;
     }
 
     .second-info h2 {
