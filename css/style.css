@@ -53,6 +53,115 @@ figure {
     max-width: 270rem;
 }
 
+.darkbox,
+.close {
+    display: none;
+}
+
+.opacity {
+    position: absolute;
+    width: 100%;
+    height: 363%;
+    opacity: 0.902;
+    background-color: #000000;
+    z-index: 2;
+}
+
+.flexenter {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.enterform {
+    position: fixed;
+    top: 30%;
+    width: 100%;
+    max-width: 411rem;
+    background-color: #fff;
+    z-index: 3;
+}
+
+
+.enterform p:first-child {
+    margin: 0;
+    padding: 30rem 30rem 0 30rem;
+    font-size: 28rem;
+    color: #0d0d0d;
+    text-align: left;
+}
+
+.form-check {
+    padding: 15rem 30rem;
+}
+
+.exit-fix {
+    position: absolute;
+    top: 8rem;
+    right: 16rem;
+    margin: 0;
+    font-size: 28rem;
+    color: #0d0d0d;
+    transform: rotate(45deg);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.exit-fix:hover {
+    color: #1f15a5;
+}
+
+.none {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.input-main {
+    padding: 0 33rem 9rem 0;
+}
+
+.input-main input {
+    width: 100%;
+    padding: 16rem 16rem 11rem 16rem;
+    background-color: #fff;
+    border: 1px solid #999;
+    outline: none;
+    appearance: none;
+}
+
+.input-main input:focus {
+    border: 1px solid #0067b8;
+}
+
+.submit {
+    max-width: 352rem;
+    width: 100%;
+    padding: 18rem 0 13rem;
+    color: #fff;
+    background-color: #0067b8;
+    font-size: 14rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    transition: all 1s ease;
+}
+
+.submit:hover {
+    background-color: #1f15a5;
+}
+
+.last-check {
+    padding: 15rem 0 0;
+    font-size: 13rem;
+    line-height: 1.5em;
+    color: #616161;
+}
+
+.last-check a {
+    color: #0067b8;
+}
+
 .wrap {
     margin: 0 30rem;
 }
@@ -276,8 +385,6 @@ figure {
 }
 
 .main-menu li:hover > a {
-    color: #0067b8;
-    text-decoration: underline;
     background-color: #f2f2f2;
 }
 
@@ -292,8 +399,8 @@ figure {
     position: absolute;
     width: 5rem;
     height: 5rem;
-    border-bottom: 1rem solid #262626;
-    border-right: 1rem solid #262626;
+    border-bottom: 1rem solid #616161;
+    border-right: 1rem solid #616161;
     transform: rotate(-45deg);
     top: 48%;
     right: 7%;
@@ -305,8 +412,8 @@ figure {
     position: absolute;
     width: 5rem;
     height: 5rem;
-    border-bottom: 1rem solid #262626;
-    border-right: 1rem solid #262626;
+    border-bottom: 1rem solid #616161;
+    border-right: 1rem solid #616161;
     transform: rotate(45deg);
     top: 46%;
     right: 6%;
@@ -395,6 +502,7 @@ tbody tr > td {
 
 .form-box form {
     max-width: 265rem;
+    padding-right: 25rem;
 }
 
 .formbox {
@@ -418,11 +526,17 @@ tbody tr > td {
     border: none;
 }
 
-.activeform form a {
+.submit-mobile {
+    border: none;
+    background-color: transparent;
+}
+
+.activeform form button {
+    padding: 10rem;
     display: inline-block;
 }
 
-.activeform form a::before {
+.activeform form button::before {
     content: "";
     position: absolute;
     top: 36%;
@@ -448,13 +562,23 @@ tbody tr > td {
     display: none;
 }
 
+.flex-button {
+    display: flex;
+    flex-direction: row;
+}
+
 .box {
     position: relative;
     width: 25rem;
     height: 25rem;
 }
 
-.box-serch a {
+.buttonform {
+    border: none;
+    background-color: transparent;
+}
+
+.serch a {
     display: block;
     width: 15rem;
     height: 15rem;
@@ -466,8 +590,8 @@ tbody tr > td {
     background-position: -21rem -2rem;
     width: 15rem;
     height: 15rem;
-    top: 22rem;
-    right: 25rem;
+    top: 20rem;
+    left: 0;
 }
 
 .serch:hover > a {
@@ -475,8 +599,8 @@ tbody tr > td {
     width: 15rem;
     height: 15rem;
     position: absolute;
-    top: 22rem;
-    right: 25rem;
+    top: 20rem;
+    left: 0;
 }
 
 .box-bask a {

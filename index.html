@@ -8,6 +8,26 @@
     <title>MiniLab проект для вивчення програмування. Придбати мобільну техніку, Комп’ютери. Упорядковуйте свої нотатки та події.</title>
 </head>
 <body>
+    <div class="opacity darkbox" id="darkbox"></div>
+    <div class="flexenter">
+        <div class="enterform close" id="fixed">
+            <p>Вхід</p>
+            <form action="#" class="form-check">
+                <input class="none exit-fix" id="exit" name="exit" type="checkbox">
+                <label class="exit-fix" for="exit">+</label>
+                <p class="input-main">
+                    <label for="email" class=""></label>
+                    <input type="email" name="email" placeholder="Електронна адреса">
+                </p>
+                <p class="input-main">
+                    <label for="password"></label>
+                    <input type="password" name="password" placeholder="Пароль">
+                </p>
+                <button type="submit" class="submit">Продовжити</button>
+                <p class="last-check">Забули пароль? <a href="#">Відновити.</a></p>
+            </form>
+        </div>
+    </div>
     <header>
         <div class="flex-between wrap">
             <div class="burger" id="burger">
@@ -163,17 +183,17 @@
             <div class="first-serch flex-between">
                 <div class="form-box">
                     <form class="form" action="#">
-                        <label class="label" for="text"></label>
-                        <input class="input" type="text" placeholder="Пошук на сайті">
+                        <div class="flex-button">
+                            <div><label class="label" for="text"></label></div>
+                            <div><input class="input" type="text" placeholder="Пошук на сайті"></div>
+                            <div><button type="submit" class="serch box buttonform"><a href="#"></a></button></div>
+                        </div>
                     </form>
-                </div>
-                <div class="box box-serch">
-                    <p class="serch"><a href="#"></a></p>
                 </div>
                 <div class="box box-bask">
                     <p class="bask"><a href="#"></a></p>
                 </div>
-                <div class="box">
+                <div class="box" id="bottForm">
                     <p class="enter"><a href="#">Вхід</a></p>
                 </div>
             </div>
@@ -184,7 +204,7 @@
             <form action="#">
                 <label class="label" for="text"></label>
                 <input class="input-mobile" type="text" placeholder="Пошук на сайті">
-                <a href="#"></a>
+                <button class="submit-mobile" type="submit"></button>
             </form>
         </div>
         <main>
@@ -199,8 +219,6 @@
                     </div>
                 </div>
             </section>
-            <!-- зробити на пошук баттон сабміт -->
-            <!-- забрати підкреслення на ховер в навігації і стрілочку світліше -->
             <!-- зробити вхід один блок як фон з опасіті -->
             <!-- зробити другий блок форму входу -->
             <!-- зробити карточки щоб помінялися за допомогоюю іф некст елемент сіблінг\превіоус елемент сіблінг -->
@@ -399,5 +417,14 @@
         this.classList.toggle('activeserch');
         formbox.classList.toggle('activeform');
     });
+    exit.onclick = function () {
+        fixed.style.display = "none"
+        darkbox.style.display = "none"
+
+    }
+    bottForm.onclick = function () {
+        fixed.style.display = "block"
+        darkbox.style.display = "block"
+    }
   </script>
 </html>
